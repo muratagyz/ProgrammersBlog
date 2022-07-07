@@ -1,4 +1,4 @@
-﻿using ProgrammersBlog.Shared.Entities.Abstact;
+﻿using ProgrammersBlog.Shared.Entities.Abstract;
 using System;
 using System.Collections.Generic;
 
@@ -10,8 +10,8 @@ namespace ProgrammersBlog.Entities.Concrete
         public string Content { get; set; }
         public string Thumbnail { get; set; }
         public DateTime Date { get; set; }
-        public int ViewsCount { get; set; }
-        public int CommentCount { get; set; }
+        public int ViewsCount { get; set; } = 0;
+        public int CommentCount { get; set; } = 0;
         public string SeoAuthor { get; set; }
         public string SeoDescription { get; set; }
         public string SeoTags { get; set; }
@@ -19,6 +19,6 @@ namespace ProgrammersBlog.Entities.Concrete
         public Category Category { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
-        public ICollection<Comment> Comment { get; set; }
+        public ICollection<Comment> Comments { get; set; }
     }
 }
